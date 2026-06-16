@@ -32,55 +32,6 @@ The structure consists of a central fact table surrounded by dimension tables, e
 
 ### Model Architecture
 
-+-------------------------+
-      |      dim_customers      |
-      +-------------------------+
-      | client_id (PK)          |
-      | client_name             |
-      | client_email            |
-      | client_state            |
-      | client_city             |
-      +------------+------------+
-                   | 1
-                   |
-                   | M
-
-+----------------------v----------------------+          +-------------------------+
-|                  ft_sales                   | M      1 |      dim_products       |
-+---------------------------------------------+----------+-------------------------+
-| sale_id (PK)                                |          | product_id (PK)         |
-| date                                        |          | product_name            |
-| client_id (FK)                              |          | actual_category         |
-| product_id (FK)                             |          | list_price_BRL          |
-| quantity                                    |          +-------------------------+
-| revenue_BRL                                 |
-+---------------------------------------------+
-| M
-|
-| 1
-+------------v------------+
-|        dim_calendar     |
-+-------------------------+
-| date (PK)               |
-| year                    |
-| month                   |
-| quarter                 |
-+-------------------------+
-
-
-### Data Dictionary
-
-#### 1. Fact Table (`ft_sales`)
-Contains the quantitative metrics and core transactions of the business.
-* **Fields:** `sale_id`, `date`, `client_id`, `product_id`, `quantity`, `revenue_BRL`.
-
-#### 2. Customer Dimension (`dim_customers`)
-Stores customer profile attributes, enabling regional and geographical analysis.
-* **Fields:** `client_id` (Primary Key), `client_name`, `client_email`, `client_state`, `client_city`.
-
-#### 3. Product Dimension (`dim_products`)
-Contains the portfolio of nautical equipment sold, properly categorized.
-* **Fields:** `product_id` (Primary Key), `product_name`, `actual_category` *(electronics, propulsion, anchoring)*, `list_price_BRL`.
 
 ---
 ## 📈 Next Steps
