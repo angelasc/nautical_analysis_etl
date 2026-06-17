@@ -46,8 +46,6 @@ The structure consists of a central fact table surrounded by dimension tables, e
     └── sale_total_BRL 
     ```
 
----
-
 ### Dimension Tables
 
 * **`customers.csv`**
@@ -70,8 +68,6 @@ The structure consists of a central fact table surrounded by dimension tables, e
     ├── product_category
     └── list_price_BRL (Product unit price)
     ```
-
----
 
 ### Auxiliary Tables
 
