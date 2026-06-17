@@ -1,6 +1,6 @@
 # Nautilus Data Insights: Pipeline de Vendas Marítimas e Modelagem Dimensional
 
-🌐 *Leia isto em outro idioma:* [English](#nautilus-data-insights-maritime-sales-pipeline--dimensional-modeling) | **Português (BR)**
+🌐 Read this in [English](#README.md)
 
 ---
 
