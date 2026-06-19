@@ -34,7 +34,7 @@ The structure consists of a central fact table surrounded by dimension tables, e
 
 ### Fact Table
 
-* **`sales.csv`**
+* **`fact_sales.csv`**
   * Central table of the model. It stores every occurred sales transaction and quantitative metrics.
   * **Schema:**
     ```sql
@@ -48,7 +48,7 @@ The structure consists of a central fact table surrounded by dimension tables, e
 
 ### Dimension Tables
 
-* **`customers.csv`**
+* **`dim_customers.csv`**
   * Stores descriptive information and attributes about the customers.
   * **Schema:**
     ```sql
@@ -59,7 +59,7 @@ The structure consists of a central fact table surrounded by dimension tables, e
     └── client_city
     ```
 
-* **`products.csv`**
+* **`dim_products.csv`**
   * Stores catalog information, categories, and pricing details for all products.
   * **Schema:**
     ```sql
@@ -71,7 +71,7 @@ The structure consists of a central fact table surrounded by dimension tables, e
 
 ### Auxiliary Tables
 
-* **`costs.csv`**
+* **`aux_costs.csv`**
   * Stores information on product purchase costs. Since products are imported, they are purchased in US Dollars (USD) and converted to Brazilian Real (BRL).
   * **Schema:**
     ```sql
@@ -84,7 +84,7 @@ The structure consists of a central fact table surrounded by dimension tables, e
     └── unit_cost_BRL
     ```
 
-* **`financial_report.csv`**
+* **`aux_financial_summary.csv`**
   * A consolidated view or report that aggregates sales data with production/import costs to display profitability metrics.
   * **Schema:**
     ```sql
