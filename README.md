@@ -28,14 +28,14 @@ The project mitigates data inconsistencies from source systems through the follo
 
 To guarantee high performance in analytical queries and facilitate seamless integration with Data Visualization tools (such as Power BI or Tableau), the data architecture follows a **Star Schema** pattern.
 
-The structure consists of a central fact table surrounded by dimension tables, enabling granular analysis by customer, product, time and financial results.
+The structure consists of a central fact table surrounded by dimension tables, enabling granular analysis by customer, product and sales.
 
 ## 🏗️ Model Architecture
 
 ### Fact Table
 
 * **`sales.csv`**
-  * **Description:** Central table of the model. It stores every occurred sales transaction and quantitative metrics.
+  * Central table of the model. It stores every occurred sales transaction and quantitative metrics.
   * **Schema:**
     ```sql
     ├── sale_id (PK)
@@ -49,7 +49,7 @@ The structure consists of a central fact table surrounded by dimension tables, e
 ### Dimension Tables
 
 * **`customers.csv`**
-  * **Description:** Stores descriptive information and attributes about the customers.
+  * Stores descriptive information and attributes about the customers.
   * **Schema:**
     ```sql
     ├── client_id (PK)
@@ -60,7 +60,7 @@ The structure consists of a central fact table surrounded by dimension tables, e
     ```
 
 * **`products.csv`**
-  * **Description:** Stores catalog information, categories, and pricing details for all products.
+  * Stores catalog information, categories, and pricing details for all products.
   * **Schema:**
     ```sql
     ├── product_id (PK)
@@ -72,7 +72,7 @@ The structure consists of a central fact table surrounded by dimension tables, e
 ### Auxiliary Tables
 
 * **`costs.csv`**
-  * **Description:** Stores information on product purchase costs. Since products are imported, they are purchased in US Dollars (USD) and converted to Brazilian Real (BRL).
+  * Stores information on product purchase costs. Since products are imported, they are purchased in US Dollars (USD) and converted to Brazilian Real (BRL).
   * **Schema:**
     ```sql
     ├── purchase_id (PK)
@@ -85,7 +85,7 @@ The structure consists of a central fact table surrounded by dimension tables, e
     ```
 
 * **`financial_report.csv`**
-  * **Description:** A consolidated view or report that aggregates sales data with production/import costs to display profitability metrics.
+  * A consolidated view or report that aggregates sales data with production/import costs to display profitability metrics.
   * **Schema:**
     ```sql
     ├── sale_id (FK)
